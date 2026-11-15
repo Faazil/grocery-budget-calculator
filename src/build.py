@@ -66,6 +66,7 @@ def page(path, title, desc, body, faq=None, extra_ld=None, crumbs=None):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="poDGbQt-x1nsXU1AHATatCfVG17MQ-CB_ZgX1bugrhQ">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{url}">
