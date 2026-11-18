@@ -6,10 +6,44 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
-    { "source": "/(.*)", "headers": [
-      { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
-      { "key": "X-Content-Type-Options", "value": "nosniff" } ] },
-    { "source": "/(style.css|calc.js|favicon.svg)", "headers": [
-      { "key": "Cache-Control", "value": "public, max-age=86400" } ] }
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    },
+    {
+      "source": "/(style.css|calc.js|favicon.svg)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://abodecalc.com/grocery-budget-calculator",
+      "permanent": true
+    },
+    {
+      "source": "/:page(about|contact|privacy-policy)",
+      "destination": "https://abodecalc.com/:page",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?!about$|contact$|privacy-policy$).+)",
+      "destination": "https://abodecalc.com/grocery-budget-calculator/:path",
+      "permanent": true
+    }
   ]
 }
